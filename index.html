@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Managemnt App</title>
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+
+    <script src="script.js"></script>
+
+    <section> </section>
+    <h2>Add New Task</h2>
+    <label for="taskName">Task Name:
+        <input type="text" id="taskName">
+    </label>
+
+    <label for="taskCategory">Category:
+        <input type="text" id="taskCategory">
+    </label>
+
+    <label for="taskDeadline">Deadline:
+        <input type="date" id="taskDeadline">
+    </label>
+
+    <label for="taskStatus">Status:
+        <select id="taskStatus">
+            <option value="In Progress">In Progress</option>
+            <option value="Pending">Pending</option>
+            <option value="Completed">Completed</option>
+        </select>
+    </label>
+
+    <button id="addTaskBtn">Add Task</button>
+    </div>
+    </section>
+    <section>
+        <div class="filter-section">
+            <h2>Filter Tasks</h2>
+            <label for="filterCategory">By Category:
+                <select id="filterCategory">
+                    <option value="All">All</option>
+
+                </select>
+            </label>
+    </section>
+    <label for="filterStatus">By Status:
+        <select id="filterStatus">
+            <option value="All">All</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Pending">Pending</option>
+            <option value="Completed">Completed</option>
+        </select>
+    </label>
+
+    <button id="applyFilterBtn">Apply Filter</button>
+    </div>
+
+    <div>
+        <h2>Task List</h2>
+        <div id="taskList"></div>
+    </div>
+
+
+</body>
+
+</html>
