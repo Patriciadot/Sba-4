@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background: #f4f4f4;
+  background: #dfafaf;
   margin: 0;
   padding: 20px;
 }
@@ -8,7 +8,7 @@ body {
 .container {
   max-width: 900px;
   margin: auto;
-  background: #fff;
+  background: #e5e2e2;
   padding: 20px;
   border-radius: 8px;
 }
@@ -32,7 +32,7 @@ table {
 
 table th,
 table td {
-  border: 1px solid #ddd;
+  border: 5px solid #aa5656;
   padding: 10px;
   text-align: left;
 }
