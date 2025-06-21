@@ -10,63 +10,48 @@
 
 </head>
 
+
 <body>
+    <div class="container">
+        <h1>Task Manager</h1>
 
-    <script src="script.js"></script>
+        <div class="task-form">
+            <input type="text" id="taskName" placeholder="Task Name" />
+            <input type="text" id="taskCategory" placeholder="Category" />
+            <input type="date" id="taskDeadline" />
+            <select id="taskStatus">
+                <option value="In Progress">In Progress</option>
+                <option value="Completed">Completed</option>
+            </select>
+            <button onclick="addTask()">Add Task</button>
+        </div>
 
-    <section> </section>
-    <h2>Add New Task</h2>
-    <label for="taskName">Task Name:
-        <input type="text" id="taskName">
-    </label>
+        <div class="filters">
+            <select id="filterCategory" onchange="renderTasks()">
+                <option value="">All Categories</option>
+            </select>
 
-    <label for="taskCategory">Category:
-        <input type="text" id="taskCategory">
-    </label>
+            <select id="filterStatus" onchange="renderTasks()">
+                <option value="">All Statuses</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Completed">Completed</option>
+                <option value="Overdue">Overdue</option>
+            </select>
+        </div>
 
-    <label for="taskDeadline">Deadline:
-        <input type="date" id="taskDeadline">
-    </label>
-
-    <label for="taskStatus">Status:
-        <select id="taskStatus">
-            <option value="In Progress">In Progress</option>
-            <option value="Pending">Pending</option>
-            <option value="Completed">Completed</option>
-        </select>
-    </label>
-
-    <button id="addTaskBtn">Add Task</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Task Name</th>
+                    <th>Category</th>
+                    <th>Deadline</th>
+                    <th>Status</th>
+                    <th>Update</th>
+                </tr>
+            </thead>
+            <tbody id="taskList"></tbody>
+        </table>
     </div>
-    </section>
-    <section>
-        <div class="filter-section">
-            <h2>Filter Tasks</h2>
-            <label for="filterCategory">By Category:
-                <select id="filterCategory">
-                    <option value="All">All</option>
-
-                </select>
-            </label>
-    </section>
-    <label for="filterStatus">By Status:
-        <select id="filterStatus">
-            <option value="All">All</option>
-            <option value="In Progress">In Progress</option>
-            <option value="Pending">Pending</option>
-            <option value="Completed">Completed</option>
-        </select>
-    </label>
-
-    <button id="applyFilterBtn">Apply Filter</button>
-    </div>
-
-    <div>
-        <h2>Task List</h2>
-        <div id="taskList"></div>
-    </div>
-
 
 </body>
-
 </html>
